@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/me/accounts?access_token=FAKE_FACEBOOK_USER_TOKEN&fields=likes,access_token,name,perms,posts.limit(1).fields(created_time)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1603858'
+      Etag:
+      - '"991ee881faad062cddd2b0e0a72460a892d9383e"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - "+qzLRi9eBKQmwMi52tdw66shNFyHR9uMth5IA3SGQL4RQUV8Sga5kkaXWPH5ThFM7E/TPlWCi9n36h8vPS2ISQ=="
+      Date:
+      - Tue, 17 Feb 2015 19:08:16 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2289'
+    body:
+      encoding: ASCII-8BIT
+      string: '{
+        "data":[
+          {
+            "likes":46,
+            "access_token":"Fake",
+            "name":"Wiredev",
+            "posts":{
+              "data":[
+                {
+                  "created_time":"2014-02-20T10:59:32+0000",
+                  "id":"293142237362668_767846513225569"
+                }
+              ],
+              "paging":{
+                "previous":"https:\/\/graph.facebook.com\/v2.0\/293142237362668\/posts?limit=1&fields=created_time&since=1392893972&access_token=FAKE_FACEBOOK_USER_TOKEN&__paging_token=enc_AdBydXlUHSyOL0VwTP7nc7nnStXGxK7USAXJxafiUrQLJ0pi9f4jFOUne2OUPZBz5777JBH13ypecnRRLKBQL6a2wQAwZCnANO2r4TI0xe9BqJRAZDZD&__previous=1",
+                "next":"https:\/\/graph.facebook.com\/v2.0\/293142237362668\/posts?limit=1&fields=created_time&access_token=FAKE_FACEBOOK_USER_TOKEN&until=1392893972&__paging_token=enc_AdBydXlUHSyOL0VwTP7nc7nnStXGxK7USAXJxafiUrQLJ0pi9f4jFOUne2OUPZBz5777JBH13ypecnRRLKBQL6a2wQAwZCnANO2r4TI0xe9BqJRAZDZD"
+              }
+            },
+            "id":"293142237362668",
+            "perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]
+          },
+          {
+            "likes":160,
+            "access_token":"Fake",
+            "name":"Andre''s test page",
+            "id":"138561856155952",
+            "perms":["ADMINISTER","EDIT_PROFILE","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]
+          }
+        ]
+      }'
+    http_version:
+  recorded_at: Tue, 17 Feb 2015 19:08:16 GMT
+recorded_with: VCR 2.9.3
