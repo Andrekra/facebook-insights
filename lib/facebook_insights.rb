@@ -2,7 +2,7 @@ require "facebook_insights/version"
 require "facebook_insights/errors/authorization_error"
 require "facebook_insights/errors/configuration_error"
 require "facebook_insights/user"
-require "facebook_insights/authentication"
+require "facebook_insights/koala_adapter"
 module FacebookInsights
   class << self
     attr_accessor :configuration
