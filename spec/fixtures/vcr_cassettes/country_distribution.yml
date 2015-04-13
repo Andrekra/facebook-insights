@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graph.facebook.com/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: client_id=FAKE_FACEBOOK_APP_ID&client_secret=FAKE_FACEBOOK_APP_SECRET&fb_exchange_token=FAKE_FACEBOOK_USER_TOKEN&grant_type=fb_exchange_token
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1685640'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v1.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - 9y2EZ0xEkjqJarNIJ2DIOnNPwwLSdtpwbdBcEiBolRWdArLIipFL5l+i/p9t/fHaGODTxr+Fz6PiyXpyNc9uZA==
+      Date:
+      - Sun, 12 Apr 2015 17:57:05 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '197'
+    body:
+      encoding: UTF-8
+      string: access_token=CAADy0UyR29cBAI3Ji3zf6C6kFJkWSg1JDTLkH5cJkuAMoKg1ChKdZBdLj4ZAlNHxZBSx4RegaZCOSDzxUK4MJWMY5U3OjNPwKfYHEUT0YAm5FqCvbNCRSRE9l33pFApyZBG03lBUwvIcWbVZCdhJAVoQC7WKxJytB8cJtG6Fn6bEGJeq127GZCD
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 17:57:05 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/293142237362668/insights/page_fans_country/lifetime?access_token=CAADy0UyR29cBAI3Ji3zf6C6kFJkWSg1JDTLkH5cJkuAMoKg1ChKdZBdLj4ZAlNHxZBSx4RegaZCOSDzxUK4MJWMY5U3OjNPwKfYHEUT0YAm5FqCvbNCRSRE9l33pFApyZBG03lBUwvIcWbVZCdhJAVoQC7WKxJytB8cJtG6Fn6bEGJeq127GZCD&since=2015-04-08&until=2015-04-09
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1685640'
+      Etag:
+      - '"2dac532b93cd7ff9effe6e19ecac46826d1672c0"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - bOfgFdFc/Nxz86gHARdyx6Vr/QCSP+JgX0Nb60ODtU3wdHtHV4WUuiBmsQsi8OYcc7I4NJTZyP3alQ2tU1JPuA==
+      Date:
+      - Sun, 12 Apr 2015 17:57:05 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '544'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"293142237362668\/insights\/page_fans_country\/lifetime","name":"page_fans_country","period":"lifetime","values":[{"value":{"NL":43,"BE":1,"CA":1,"DE":1},"end_time":"2015-04-08T07:00:00+0000"}],"title":"Lifetime
+        Likes by Country","description":"Lifetime: Aggregated Facebook location data,
+        sorted by country, about the people who like your Page. (Unique Users)"}],"paging":{"previous":"https:\/\/graph.facebook.com\/293142237362668\/insights\/page_fans_country\/lifetime?access_token=CAADy0UyR29cBAI3Ji3zf6C6kFJkWSg1JDTLkH5cJkuAMoKg1ChKdZBdLj4ZAlNHxZBSx4RegaZCOSDzxUK4MJWMY5U3OjNPwKfYHEUT0YAm5FqCvbNCRSRE9l33pFApyZBG03lBUwvIcWbVZCdhJAVoQC7WKxJytB8cJtG6Fn6bEGJeq127GZCD&since=1428364800&until=1428451200","next":"https:\/\/graph.facebook.com\/293142237362668\/insights\/page_fans_country\/lifetime?access_token=CAADy0UyR29cBAI3Ji3zf6C6kFJkWSg1JDTLkH5cJkuAMoKg1ChKdZBdLj4ZAlNHxZBSx4RegaZCOSDzxUK4MJWMY5U3OjNPwKfYHEUT0YAm5FqCvbNCRSRE9l33pFApyZBG03lBUwvIcWbVZCdhJAVoQC7WKxJytB8cJtG6Fn6bEGJeq127GZCD&since=1428537600&until=1428624000"}}'
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 17:57:05 GMT
+recorded_with: VCR 2.9.3

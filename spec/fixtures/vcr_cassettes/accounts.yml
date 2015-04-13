@@ -1,8 +1,55 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://graph.facebook.com/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: client_id=FAKE_FACEBOOK_APP_ID&client_secret=FAKE_FACEBOOK_APP_SECRET&fb_exchange_token=FAKE_FACEBOOK_USER_TOKEN&grant_type=fb_exchange_token
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1685640'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v1.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - MiRxygTGplXl4/G5X97RHF3BWsFjoOG7/s9gznv+rPDmNktyNLfw5zS4B62ijDPznXt3AuP9gMp8ksA7z0Xprg==
+      Date:
+      - Sun, 12 Apr 2015 17:55:43 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '198'
+    body:
+      encoding: UTF-8
+      string: access_token=CAADy0UyR29cBAMixhta6HuVWLYijnzPddvwwoafZBLlfjEMS1ZATWe8H4ZANpMAgy89p2r5sJcjwHZBzq3TbbMbn97snfeZC1vBYJrLbaK6MkPPSguvkINuyVdKhJPGhVvoPZCeIKdco9pmcB2TxQczMSv56OM7uFZCWjWTk2dmyR4NIBj6ZACFI
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 17:55:43 GMT
+- request:
     method: get
-    uri: https://graph.facebook.com/me/accounts?access_token=FAKE_FACEBOOK_USER_TOKEN&fields=likes,access_token,name,perms,posts.limit(1).fields(created_time)
+    uri: https://graph.facebook.com/me/accounts?access_token=CAADy0UyR29cBAMixhta6HuVWLYijnzPddvwwoafZBLlfjEMS1ZATWe8H4ZANpMAgy89p2r5sJcjwHZBzq3TbbMbn97snfeZC1vBYJrLbaK6MkPPSguvkINuyVdKhJPGhVvoPZCeIKdco9pmcB2TxQczMSv56OM7uFZCWjWTk2dmyR4NIBj6ZACFI&fields=likes,access_token,name,perms,posts.limit(1).fields(created_time)
     body:
       encoding: US-ASCII
       string: ''
@@ -23,9 +70,9 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Fb-Rev:
-      - '1603858'
+      - '1685640'
       Etag:
-      - '"991ee881faad062cddd2b0e0a72460a892d9383e"'
+      - '"57be3c7d1bf2958db4ba38e021e00c9cfcf8c4d5"'
       Pragma:
       - no-cache
       Cache-Control:
@@ -34,46 +81,24 @@ http_interactions:
       - v2.0
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Encoding
       X-Fb-Debug:
-      - "+qzLRi9eBKQmwMi52tdw66shNFyHR9uMth5IA3SGQL4RQUV8Sga5kkaXWPH5ThFM7E/TPlWCi9n36h8vPS2ISQ=="
+      - dWBgHnxUH5g1pVaPogk7CRIRsqJMRyWXxHKtqvYPUHtZIBsEpVAp5PrMcL7pxMRaPi81wiJSD/WLk8MNc3onuA==
       Date:
-      - Tue, 17 Feb 2015 19:08:16 GMT
+      - Sun, 12 Apr 2015 17:55:43 GMT
       Connection:
       - keep-alive
       Content-Length:
-      - '2289'
+      - '2105'
     body:
       encoding: ASCII-8BIT
-      string: '{
-        "data":[
-          {
-            "likes":46,
-            "access_token":"Fake",
-            "name":"Wiredev",
-            "posts":{
-              "data":[
-                {
-                  "created_time":"2014-02-20T10:59:32+0000",
-                  "id":"293142237362668_767846513225569"
-                }
-              ],
-              "paging":{
-                "previous":"https:\/\/graph.facebook.com\/v2.0\/293142237362668\/posts?limit=1&fields=created_time&since=1392893972&access_token=FAKE_FACEBOOK_USER_TOKEN&__paging_token=enc_AdBydXlUHSyOL0VwTP7nc7nnStXGxK7USAXJxafiUrQLJ0pi9f4jFOUne2OUPZBz5777JBH13ypecnRRLKBQL6a2wQAwZCnANO2r4TI0xe9BqJRAZDZD&__previous=1",
-                "next":"https:\/\/graph.facebook.com\/v2.0\/293142237362668\/posts?limit=1&fields=created_time&access_token=FAKE_FACEBOOK_USER_TOKEN&until=1392893972&__paging_token=enc_AdBydXlUHSyOL0VwTP7nc7nnStXGxK7USAXJxafiUrQLJ0pi9f4jFOUne2OUPZBz5777JBH13ypecnRRLKBQL6a2wQAwZCnANO2r4TI0xe9BqJRAZDZD"
-              }
-            },
-            "id":"293142237362668",
-            "perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]
-          },
-          {
-            "likes":160,
-            "access_token":"Fake",
-            "name":"Andre''s test page",
-            "id":"138561856155952",
-            "perms":["ADMINISTER","EDIT_PROFILE","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]
-          }
-        ]
-      }'
-    http_version:
-  recorded_at: Tue, 17 Feb 2015 19:08:16 GMT
+      string: '{"data":[{"likes":46,"access_token":"CAADy0UyR29cBAAh5ol2V4BQ3q3zAb5YOWN8dEgfH9E3AGTJ5dlkzEnRAZAmiZBjdBLSwia5oAxlkKYBwHuvKwWL02AZCvjL3hnzIZAmhP9XMVSzunn1HXJFRZBsLTm1WFr5XLES0ZBMYpbJCNwmXfdrqMeQad96Az0bZAkvtF6lqlKKF0s4Sz6b","name":"Wiredev","posts":{"data":[{"created_time":"2014-02-20T10:59:32+0000","id":"293142237362668_767846513225569"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.0\/293142237362668\/posts?limit=1&fields=created_time&since=1392893972&access_token=CAADy0UyR29cBAMixhta6HuVWLYijnzPddvwwoafZBLlfjEMS1ZATWe8H4ZANpMAgy89p2r5sJcjwHZBzq3TbbMbn97snfeZC1vBYJrLbaK6MkPPSguvkINuyVdKhJPGhVvoPZCeIKdco9pmcB2TxQczMSv56OM7uFZCWjWTk2dmyR4NIBj6ZACFI&__paging_token=enc_AdBydXlUHSyOL0VwTP7nc7nnStXGxK7USAXJxafiUrQLJ0pi9f4jFOUne2OUPZBz5777JBH13ypecnRRLKBQL6a2wQAwZCnANO2r4TI0xe9BqJRAZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.0\/293142237362668\/posts?limit=1&fields=created_time&access_token=CAADy0UyR29cBAMixhta6HuVWLYijnzPddvwwoafZBLlfjEMS1ZATWe8H4ZANpMAgy89p2r5sJcjwHZBzq3TbbMbn97snfeZC1vBYJrLbaK6MkPPSguvkINuyVdKhJPGhVvoPZCeIKdco9pmcB2TxQczMSv56OM7uFZCWjWTk2dmyR4NIBj6ZACFI&until=1392893972&__paging_token=enc_AdBydXlUHSyOL0VwTP7nc7nnStXGxK7USAXJxafiUrQLJ0pi9f4jFOUne2OUPZBz5777JBH13ypecnRRLKBQL6a2wQAwZCnANO2r4TI0xe9BqJRAZDZD"}},"id":"293142237362668","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]},{"likes":174,"access_token":"CAADy0UyR29cBACFhkuSZAiBKUovw9E1a8TTMjOS1lZAwuszi3GZBkVIrhRQxgPIU9nSeKaWNcy4a4ze6zAD8PL8ZAwFFFzRd4Ga6NzQuw3qbqH69cq2ffjX5ZCcjP2thZATG99PlkslqIoLtNIJmGRwousbzBz9RbdcaL5td9wjqX1Yg1EOhNL","name":"Eye
+        Revolution","posts":{"data":[{"created_time":"2015-03-25T15:09:02+0000","id":"162837123830517_771862326261324"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.0\/162837123830517\/posts?limit=1&fields=created_time&since=1427296142&access_token=CAADy0UyR29cBAMixhta6HuVWLYijnzPddvwwoafZBLlfjEMS1ZATWe8H4ZANpMAgy89p2r5sJcjwHZBzq3TbbMbn97snfeZC1vBYJrLbaK6MkPPSguvkINuyVdKhJPGhVvoPZCeIKdco9pmcB2TxQczMSv56OM7uFZCWjWTk2dmyR4NIBj6ZACFI&__paging_token=enc_AdDf8QUV64PzdXBdmYOniIDl0IZBjfA1lDZCnS70OKScaodf6W5lC75RLce42xBO7R7ZAvE2vDZBJY7I1Lf3qVpFHwm0QyZBHy3gUFY8xS2m4f387TwZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.0\/162837123830517\/posts?limit=1&fields=created_time&access_token=CAADy0UyR29cBAMixhta6HuVWLYijnzPddvwwoafZBLlfjEMS1ZATWe8H4ZANpMAgy89p2r5sJcjwHZBzq3TbbMbn97snfeZC1vBYJrLbaK6MkPPSguvkINuyVdKhJPGhVvoPZCeIKdco9pmcB2TxQczMSv56OM7uFZCWjWTk2dmyR4NIBj6ZACFI&until=1427296142&__paging_token=enc_AdDf8QUV64PzdXBdmYOniIDl0IZBjfA1lDZCnS70OKScaodf6W5lC75RLce42xBO7R7ZAvE2vDZBJY7I1Lf3qVpFHwm0QyZBHy3gUFY8xS2m4f387TwZDZD"}},"id":"162837123830517","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]},{"likes":1,"access_token":"CAADy0UyR29cBAD2QqyCnSfu0h2r2eBqqY2PzjiWRrFDj1RBwDBnkmT2tXXkqhUwZA3NuATxoHKyTM9QAv9kSvEiJei4eI9L6wnhlabMZBhiw1sE1kwUfsgzN9BkSX5kq9f2AQ9k5nthTDgAeR5vB23FGZBBfmI5iBcNPZB4R7GCmAQUYjZBd4","name":"Panofy","id":"407848702618149","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]},{"likes":0,"access_token":"CAADy0UyR29cBAGWDZBBbLg3fR6njjheZCfiKutzBzzKX90rVzX06GYzn4Vfx2KqRgZCDGHlAp2g5Wd3aLkhtUk5qe37PfOEVj7XE8m9yYgHYIlIyFA80SbL5ohXE2TXUOSiLNdAqpAs6i4VFCAwRZA5AZBsdlESY02rCfARa7oUWx2ZA0S94IB","name":"A
+        Good Old Fashioned Orgy Community","id":"251191621619514","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]},{"likes":0,"access_token":"CAADy0UyR29cBAJCl6u0u5BAkZCApEJCvwJzQIUtNa201mYssxbuplmLMuPqfuzMjYwNe6woRgUoS4F0ZBLDtKMTZAf6nTZCmMARuvqTRN5tevZAsL7INtw8IpLErf0e5UTajlZAQB566VZClmgfHrOaSgffP8pnjno0MBuyWR61ooxOpxd6vZANU","name":"Dev
+        A Good Old Fashioned Orgy Community","id":"172870622813453","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]},{"likes":4,"access_token":"CAADy0UyR29cBAOKad4Jg6iPfsuLCokN59PQtyUmLqeIHTVLlaE6uYbwct4bwEN7VVsPeiJUUxgQnLYZBZCWcSu8i1cjB1qbGZC8F5BuQIZB4e8m6FzvZBAZA0YPccdSQaWbZAIvYcf91WQRGMoZBZBZCk5XxqF65ZB9y6vkK4DfOqOFxXrzbUfEQMvQ","name":"Tour","id":"132636666757353","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]},{"likes":1,"access_token":"CAADy0UyR29cBAOolqJea6ZAwcGv2cZB6GiDFpoxSiRICfxAvyIZBfNjZBSWmp2iskeKgv8ktqhFsq3bzwx0PiZBpTY07Au6nZCnyJKyit4a3EOuEsGoX3nedhfw3Pj7qFW7ECjvF1BhUR0TwDy4Gs5doDKIQZCzsTlPZBQyOP69nvG9pRc5eEQHP","name":"Andre''s
+        test page","id":"138561856155952","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]},{"likes":0,"access_token":"CAADy0UyR29cBANpjoM61Kmee0be1G17hNZA32zW41ckY7N59VkAArNHiZBrsTYp03KsaZCjJjCSU3XP70EK3VOyXOw3ZAzGFjMm68urDPIZBOPra0BnGjAdjdqG2SrXPZC51chZCJ304qMHWn2g1OCdzJMyXkeKTRqFqrwMfZCDDGG88pwsRZCa1O","name":"Talents
+        Toolkit","id":"112181392163054","perms":["ADMINISTER","EDIT_PROFILE","CREATE_CONTENT","MODERATE_CONTENT","CREATE_ADS","BASIC_ADMIN"]}],"paging":{"cursors":{"before":"MjkzMTQyMjM3MzYyNjY4","after":"MTEyMTgxMzkyMTYzMDU0"}}}'
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 17:55:43 GMT
 recorded_with: VCR 2.9.3

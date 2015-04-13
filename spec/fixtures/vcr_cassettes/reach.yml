@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graph.facebook.com/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: client_id=FAKE_FACEBOOK_APP_ID&client_secret=FAKE_FACEBOOK_APP_SECRET&fb_exchange_token=FAKE_FACEBOOK_USER_TOKEN&grant_type=fb_exchange_token
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1685640'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v1.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - ZCKgGpu+h0SEsY2SuqoLe/Mtw1Je41VPovzfksKinwazC5UQimh6gw6kaWEMHiy8usF8CRAXDd9mngSNvUmATg==
+      Date:
+      - Mon, 13 Apr 2015 16:00:17 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '215'
+    body:
+      encoding: UTF-8
+      string: access_token=FAKE_FACEBOOK_USER_TOKEN
+    http_version:
+  recorded_at: Mon, 13 Apr 2015 16:00:17 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/293142237362668/insights/page_fans/lifetime?access_token=FAKE_FACEBOOK_USER_TOKEN&since=2015-04-08&until=2015-04-09
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1685640'
+      Etag:
+      - '"a6bbe7955061f6c49636fcf03bcf5d460524b1fe"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - OYhfozFo5MBUW9KS1O2374koCAbelC+JIrc0jvd5pPDoqHDXgSwmwqcciwpnDMU+I7oknMIM2sp3qONJwJmv5Q==
+      Date:
+      - Mon, 13 Apr 2015 16:00:19 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '979'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"293142237362668\/insights\/page_fans\/lifetime","name":"page_fans","period":"lifetime","values":[{"value":46,"end_time":"2015-04-08T07:00:00+0000"}],"title":"Lifetime
+        Total Likes","description":"Lifetime: The total number of people who have
+        liked your Page. (Unique Users)"}],"paging":{"previous":"https:\/\/graph.facebook.com\/293142237362668\/insights\/page_fans\/lifetime?access_token=FAKE_FACEBOOK_USER_TOKEN&since=1428364800&until=1428451200","next":"https:\/\/graph.facebook.com\/293142237362668\/insights\/page_fans\/lifetime?access_token=FAKE_FACEBOOK_USER_TOKEN&since=1428537600&until=1428624000"}}'
+    http_version:
+  recorded_at: Mon, 13 Apr 2015 16:00:19 GMT
+recorded_with: VCR 2.9.3

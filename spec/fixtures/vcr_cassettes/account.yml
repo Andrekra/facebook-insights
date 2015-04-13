@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graph.facebook.com/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: client_id=FAKE_FACEBOOK_APP_ID&client_secret=FAKE_FACEBOOK_APP_SECRET&fb_exchange_token=FAKE_FACEBOOK_USER_TOKEN&grant_type=fb_exchange_token
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1685640'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v1.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - qeY8ZTmwt5xp3rOS98hEgQi8gDSHZfWKy8RuxDGX1bDsECsmedIh1LKFO6RMMQhqaAdENVbPjsDUdLA3nTPuKg==
+      Date:
+      - Sun, 12 Apr 2015 17:55:44 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '197'
+    body:
+      encoding: UTF-8
+      string: access_token=CAADy0UyR29cBAEZCdKBLJyZAhH0ZCjJq6E6RspzxEDhYCQnVf9j9SeEtZBLZBzjGUYF2DiwgLFRhxhPcKH8GDOHIDRI3sZACIWgP7RLDIxcCncVwpqSbEC51JpG8JDbyjtzLcfuxSAbNzf8vpA0ixAPQ3UhmAZBSLTOpQEvSSv8Vs1xGdN3Ce2x
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 17:55:44 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/293142237362668?access_token=CAADy0UyR29cBAEZCdKBLJyZAhH0ZCjJq6E6RspzxEDhYCQnVf9j9SeEtZBLZBzjGUYF2DiwgLFRhxhPcKH8GDOHIDRI3sZACIWgP7RLDIxcCncVwpqSbEC51JpG8JDbyjtzLcfuxSAbNzf8vpA0ixAPQ3UhmAZBSLTOpQEvSSv8Vs1xGdN3Ce2x
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1685640'
+      Etag:
+      - '"b4c3f40349a8444ae37aa6c428d01214dffd4f97"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - UzgEfMrDzzlwlfpQgpWGCVHn6VG8nfmKVcWinn7n5ipCt9qQ+/UM5Ke/iFibimEqyIoxTGr+Kpkkr5T7ibJWow==
+      Date:
+      - Sun, 12 Apr 2015 17:55:44 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '722'
+    body:
+      encoding: UTF-8
+      string: '{"id":"293142237362668","can_post":true,"category":"Internet\/software","checkins":0,"country_page_likes":46,"cover":{"cover_id":"589066871103535","offset_x":0,"offset_y":57,"source":"https:\/\/fbcdn-sphotos-a-a.akamaihd.net\/hphotos-ak-xfa1\/t31.0-8\/p180x540\/887546_589066871103535_553415687_o.jpg","id":"589066871103535"},"has_added_app":false,"is_community_page":false,"is_published":true,"new_like_count":0,"likes":46,"link":"https:\/\/www.facebook.com\/wirelab.dev","name":"Wiredev","offer_eligible":false,"parking":{"lot":0,"street":0,"valet":0},"promotion_eligible":true,"talking_about_count":0,"unread_message_count":0,"unread_notif_count":0,"unseen_message_count":0,"username":"wirelab.dev","were_here_count":0}'
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 17:55:44 GMT
+recorded_with: VCR 2.9.3

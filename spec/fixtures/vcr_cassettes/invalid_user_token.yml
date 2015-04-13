@@ -1,14 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://graph.facebook.com/me/accounts?access_token=FAKE&fields=likes,access_token,name,perms,posts.limit(1).fields(created_time)
+    method: post
+    uri: https://graph.facebook.com/oauth/access_token
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: client_id=FAKE_FACEBOOK_APP_ID&client_secret=FAKE_FACEBOOK_APP_SECRET&fb_exchange_token=FAKE&grant_type=fb_exchange_token
     headers:
       User-Agent:
       - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -25,17 +27,19 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Fb-Rev:
-      - '1603858'
+      - '1685640'
       Pragma:
       - no-cache
       Cache-Control:
       - no-store
+      Facebook-Api-Version:
+      - v1.0
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       X-Fb-Debug:
-      - 8gyQzLvYV5o8EmudXSnfhVtwGgPJENYb0L7wDMi/GgluCWkirHCCEQ86Sm0Ps9A17glIIdKV8Q0Uwkqa/5gmmQ==
+      - TI3WDGiom6iK2TdAn34tWEBDVqxXLT0ioEslZ/3mb82bPHWNhrNed8LauvE4XV4/dUHeR8WVaLoKa5YO38yHFg==
       Date:
-      - Tue, 17 Feb 2015 19:08:16 GMT
+      - Sun, 12 Apr 2015 17:55:43 GMT
       Connection:
       - keep-alive
       Content-Length:
@@ -44,5 +48,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":{"message":"Invalid OAuth access token.","type":"OAuthException","code":190}}'
     http_version: 
-  recorded_at: Tue, 17 Feb 2015 19:08:16 GMT
+  recorded_at: Sun, 12 Apr 2015 17:55:44 GMT
 recorded_with: VCR 2.9.3

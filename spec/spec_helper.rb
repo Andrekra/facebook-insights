@@ -5,6 +5,9 @@ require 'vcr'
 # Lib
 require "facebook_insights"
 
+require 'bundler/setup'
+Bundler.setup
+
 # Configuration
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -32,5 +35,3 @@ FacebookInsights.configure do |config|
   config.app_id = ENV['FACEBOOK_APP_ID']
   config.app_secret = ENV['FACEBOOK_APP_SECRET']
 end
-
-puts FacebookInsights.configuration.scope

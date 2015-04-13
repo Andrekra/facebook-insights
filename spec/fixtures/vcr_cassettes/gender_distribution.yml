@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://graph.facebook.com/oauth/access_token
+    body:
+      encoding: UTF-8
+      string: client_id=FAKE_FACEBOOK_APP_ID&client_secret=FAKE_FACEBOOK_APP_SECRET&fb_exchange_token=FAKE_FACEBOOK_USER_TOKEN&grant_type=fb_exchange_token
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1685640'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v1.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - v6HGAXztHbVfM+ivkEAzZUvuvUNSXuEDkJxuIschY2DP5CSZqjFyU6HL9Li3odlXDrkgv2NaWrWDoeBIl/54AA==
+      Date:
+      - Sun, 12 Apr 2015 17:58:22 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '194'
+    body:
+      encoding: UTF-8
+      string: access_token=CAADy0UyR29cBAA2AYR9ZCJNwI52vVhDsdmFCyHAFaKjfeWpE0iieF2YEJf9EWhEKtY9dmrcAlX4AOzQxchUMUkKtJUpBNtuDSnJxoORQf96LMhjOs71fy4PhtKvNpDKfPE6WABKHImBgZCdttZBKv1jMIbTmaM90UQZCBPYKrY1edCgPQiLI
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 17:58:22 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/293142237362668/insights/page_fans_gender_age/lifetime?access_token=CAADy0UyR29cBAA2AYR9ZCJNwI52vVhDsdmFCyHAFaKjfeWpE0iieF2YEJf9EWhEKtY9dmrcAlX4AOzQxchUMUkKtJUpBNtuDSnJxoORQf96LMhjOs71fy4PhtKvNpDKfPE6WABKHImBgZCdttZBKv1jMIbTmaM90UQZCBPYKrY1edCgPQiLI&since=2015-04-08&until=2015-04-09
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1685640'
+      Etag:
+      - '"896f4d381c3a1633e85dfaf01f6a99cb292c9f57"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - HgYDB9YkPUU2OdMTlnZrIfJJtxQEULYXMwUyGurvUZjl7bpJl/0hnz2w1KUpNzX85dynSQHOoaFhelaMLPampw==
+      Date:
+      - Sun, 12 Apr 2015 17:58:22 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '619'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"293142237362668\/insights\/page_fans_gender_age\/lifetime","name":"page_fans_gender_age","period":"lifetime","values":[{"value":{"M.25-34":15,"F.25-34":10,"M.18-24":7,"F.18-24":6,"M.35-44":3,"F.55-64":1,"U.25-34":1,"F.35-44":1,"M.13-17":1,"M.45-54":1},"end_time":"2015-04-08T07:00:00+0000"}],"title":"Lifetime
+        Likes by Gender and Age","description":"Lifetime: Aggregated demographic data
+        about the people who like your Page based on the age and gender information
+        they provide in their user profiles. (Unique Users)"}],"paging":{"previous":"https:\/\/graph.facebook.com\/293142237362668\/insights\/page_fans_gender_age\/lifetime?access_token=CAADy0UyR29cBAA2AYR9ZCJNwI52vVhDsdmFCyHAFaKjfeWpE0iieF2YEJf9EWhEKtY9dmrcAlX4AOzQxchUMUkKtJUpBNtuDSnJxoORQf96LMhjOs71fy4PhtKvNpDKfPE6WABKHImBgZCdttZBKv1jMIbTmaM90UQZCBPYKrY1edCgPQiLI&since=1428364800&until=1428451200","next":"https:\/\/graph.facebook.com\/293142237362668\/insights\/page_fans_gender_age\/lifetime?access_token=CAADy0UyR29cBAA2AYR9ZCJNwI52vVhDsdmFCyHAFaKjfeWpE0iieF2YEJf9EWhEKtY9dmrcAlX4AOzQxchUMUkKtJUpBNtuDSnJxoORQf96LMhjOs71fy4PhtKvNpDKfPE6WABKHImBgZCdttZBKv1jMIbTmaM90UQZCBPYKrY1edCgPQiLI&since=1428537600&until=1428624000"}}'
+    http_version: 
+  recorded_at: Sun, 12 Apr 2015 17:58:22 GMT
+recorded_with: VCR 2.9.3
