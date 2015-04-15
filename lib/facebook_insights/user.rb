@@ -14,7 +14,7 @@ module FacebookInsights
       @graph = FacebookInsights::KoalaAdapter.new.api(token)
     end
 
-    def exchange_token(token)
+    def exchange_token token
       # Exhange short living token (2h) to a long living (60 days)
       # https://developers.facebook.com/docs/facebook-login/access-tokens?locale=nl_NL#extending
       oath = FacebookInsights::KoalaAdapter.new.oath FacebookInsights.configuration.app_id, FacebookInsights.configuration.app_secret
