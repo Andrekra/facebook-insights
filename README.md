@@ -2,6 +2,8 @@
 
 A gem to quickly get some insights about a users page. The statistics aren't supposed to be (over)complete, but quickly give an overview. The goal is, to do this for every social media channel (twitter, youtube, instagram and google analytics(websites))
 
+[![Build Status](https://travis-ci.org/Andrekra/facebook-insights.svg)](https://travis-ci.org/Andrekra/facebook-insights)
+
 ## Environment variables (for specs)
 `FACEBOOK_APP_ID=FAKE_FACEBOOK_APP_ID`
 `FACEBOOK_APP_SECRET=FAKE_FACEBOOK_APP_SECRET`
